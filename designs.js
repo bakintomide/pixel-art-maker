@@ -1,5 +1,3 @@
-// Select color input
-// Select size input
 
 // When size is submitted by the user, call makeGrid()
    $('#sizePicker').submit(function(event){
@@ -7,17 +5,12 @@
      makeGrid();
      
    });
-
-
-
-
-
-
+   
    function makeGrid() {
 
-// Your code goes here!
+// set the Height and Width of the Pixel Art Maker
 var rows = $('#inputHeight').val();
-var columns = $('#inputWeight').val();
+var columns = $('#inputWidth').val();
 $('#pixelCanvas').html('');
 for(var i=1; i<=rows; i++){
     $('#pixelCanvas').append('<tr id=Tree' + i + '></tr>');
@@ -30,7 +23,7 @@ for(var j=1; j<=columns; j++){
     // To add color to the box
     $('td').click(function(event){
      var color= $('#colorPicker').val();
-    //  To remove
+    //  To remove color when clicked on
      if($(this).attr("style")){
         $(this).removeAttr('style');
     }
